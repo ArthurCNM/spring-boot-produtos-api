@@ -4,7 +4,7 @@ Esta é uma API REST iniciada durante o **Bootcamp Java Deloitte** para gerencia
 
 ## 🚀 Tecnologias Utilizadas
 
-* **Java 21+**
+* **Java 21**
 * **Spring Boot 4.0.2**
 * **Maven** (Gerenciador de dependências)
 * **Postman** (Para testes de API)
