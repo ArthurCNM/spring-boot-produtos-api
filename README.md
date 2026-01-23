@@ -17,7 +17,7 @@ Esta é uma API REST iniciada durante o **Bootcamp Java Deloitte** para gerencia
 * **Remover produto**: Exclui um produto do catálogo pelo ID.
 
 ## 📡 Endpoints da API 
-* **GET/produtos Retorna todos os produtos**
-* **GET/produtos/{id} Retorna um produto por ID**
-* **POST/produtos Adiciona um novo produto**
-* **DELETE/produtos/{id} Remove um produto por ID**
+* **GET /produtos Retorna todos os produtos**
+* **GET /produtos/{id} Retorna um produto por ID**
+* **POST /produtos Adiciona um novo produto**
+* **DELETE /produtos/{id} Remove um produto por ID**
