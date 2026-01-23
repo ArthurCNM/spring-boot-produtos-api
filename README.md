@@ -16,8 +16,8 @@ Esta é uma API REST iniciada durante o **Bootcamp Java Deloitte** para gerencia
 * **Adicionar produto**: Registra um novo produto enviando um JSON via POST.
 * **Remover produto**: Exclui um produto do catálogo pelo ID.
 
-Método,Endpoint,Descrição
-GET,/produtos,Retorna todos os produtos
-GET,/produtos/{id},Retorna um produto por ID
-POST,/produtos,Adiciona um novo produto
-DELETE,/produtos/{id},Remove um produto por ID
+## 📡 Endpoints da API 
+* **GET/produtos Retorna todos os produtos
+* **GET/produtos/{id} Retorna um produto por ID
+* **POST/produtos Adiciona um novo produto
+* **DELETE/produtos/{id} Remove um produto por ID
