@@ -1,6 +1,6 @@
 # API de Gerenciamento de Produtos 📦
 
-Esta é uma API REST iniciada durante o **Bootcamp Java Deloitte** para gerenciar um catálogo de produtos. O projeto utiliza **Spring Boot** e demonstra operações básicas de CRUD (Create, Read, Update, Delete) com manipulação de dados em memória.
+Esta é uma API REST desenvolvida durante o Bootcamp Java Deloitte. O projeto foi evoluído para utilizar Spring Data JPA com banco de dados H2, permitindo operações de CRUD (Create, Read, Update, Delete) com persistência de dados.
 
 ## 🚀 Tecnologias Utilizadas
 
