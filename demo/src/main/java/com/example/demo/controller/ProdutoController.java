@@ -3,7 +3,10 @@ package com.example.demo.controller;
 import com.example.demo.dto.ProdutoRequestDTO;
 import com.example.demo.dto.ProdutoResponseDTO;
 import com.example.demo.service.ProdutoService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.Map;
 
@@ -18,38 +21,45 @@ public class ProdutoController {
     }
 
     @GetMapping("/hello")
-    public String hello() {
-        return "API de Produtos rodando!";
+    public ResponseEntity<String> hello() {
+        return ResponseEntity.ok("API de Produtos rodando!"); // Status 200 (OK)
     }
 
     @PostMapping
-    public ProdutoResponseDTO adicionar(@RequestBody ProdutoRequestDTO dto) {
-        return service.salvar(dto);
+    public ResponseEntity<ProdutoResponseDTO> adicionar(@RequestBody ProdutoRequestDTO dto) {
+        ProdutoResponseDTO novoProduto = service.salvar(dto);
+        // Status 201 Created
+        return ResponseEntity.status(HttpStatus.CREATED).body(novoProduto);
     }
 
     @GetMapping
-    public List<ProdutoResponseDTO> listarTodos() {
-        return service.listar();
+    public ResponseEntity<List<ProdutoResponseDTO>> listarTodos() {
+        List<ProdutoResponseDTO> lista = service.listar();
+        return ResponseEntity.ok(lista); // Status 200 (OK)
     }
 
     @GetMapping("/{id}")
-    public ProdutoResponseDTO buscarPorId(@PathVariable Long id) {
-        return service.buscarPorId(id);
+    public ResponseEntity<ProdutoResponseDTO> buscarPorId(@PathVariable Long id) {
+        ProdutoResponseDTO produto = service.buscarPorId(id);
+        return ResponseEntity.ok(produto); // Status 200 (OK)
     }
 
     @PutMapping("/{id}")
-    public ProdutoResponseDTO atualizar(@PathVariable Long id, @RequestBody ProdutoRequestDTO dto) {
-        return service.atualizar(id, dto);
+    public ResponseEntity<ProdutoResponseDTO> atualizar(@PathVariable Long id, @RequestBody ProdutoRequestDTO dto) {
+        ProdutoResponseDTO atualizado = service.atualizar(id, dto);
+        return ResponseEntity.ok(atualizado); // Status 200 (OK)
     }
 
     @PatchMapping("/{id}")
-    public ProdutoResponseDTO atualizarParcial(@PathVariable Long id, @RequestBody Map<String, Object> campos) {
-        return service.atualizarParcial(id, campos);
+    public ResponseEntity<ProdutoResponseDTO> atualizarParcial(@PathVariable Long id, @RequestBody Map<String, Object> campos) {
+        ProdutoResponseDTO atualizado = service.atualizarParcial(id, campos);
+        return ResponseEntity.ok(atualizado); // Status 200 (OK)
     }
 
     @DeleteMapping("/{id}")
-    public String deletar(@PathVariable Long id) {
+    public ResponseEntity<Void> deletar(@PathVariable Long id) {
         service.remover(id);
-        return "Produto com id " + id + " removido com sucesso!";
+        // Status 204 No Content: Remoções bem-sucedidas
+        return ResponseEntity.noContent().build();
     }
 }
