@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		// Este comando inicia todo o sistema do Spring Boot
 		SpringApplication.run(DemoApplication.class, args);
 	}
 }

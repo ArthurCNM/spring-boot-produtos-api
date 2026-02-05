@@ -1,12 +1,11 @@
-package com.example.demo.service.service.impl;
+package com.example.demo.service;
 
 import com.example.demo.dto.*;
 import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.mapper.ProdutoMapper;
 import com.example.demo.model.Produto;
 import com.example.demo.repository.ProdutoRepository;
-import com.example.demo.service.ProdutoService;
-import com.example.demo.service.validation.ServiceValidation;
+import com.example.demo.service.validation.ValidadorProduto;
 import org.springframework.stereotype.Service;
 import java.util.*;
 
@@ -15,9 +14,9 @@ public class ProdutoServiceImpl implements ProdutoService {
 
     private final ProdutoRepository repository;
     private final ProdutoMapper mapper;
-    private final List<ServiceValidation> validadores; // OCP: Lista de regras
+    private final List<ValidadorProduto> validadores; // OCP: Lista de regras
 
-    public ProdutoServiceImpl(ProdutoRepository repository, ProdutoMapper mapper, List<ServiceValidation> validadores) {
+    public ProdutoServiceImpl(ProdutoRepository repository, ProdutoMapper mapper, List<ValidadorProduto> validadores) {
         this.repository = repository;
         this.mapper = mapper;
         this.validadores = validadores;
