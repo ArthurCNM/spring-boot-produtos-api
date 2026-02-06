@@ -119,3 +119,12 @@ A documentação interativa está disponível no ambiente de produção: [https:
    A API estará disponível em http://localhost:8080/produtos. <br>
    o H2 estará disponível em http://localhost:8080/h2-console. <br>
    o Swagger estará disponível em http://localhost:8080/swagger-ui/index.html#/. <br>
+
+##🗄️ Tabela de Credenciais H2 Local
+| Propriedade | Valor |
+| :--- | :--- |
+| **Interface Web** | `http://localhost:8080/h2-console` |
+| **Driver class** | `org.h2.Driver` |
+| **JDBC URL** | `jdbc:h2:mem:testdb` |
+| **User Name** | `sa` |
+| **Password** | *(vazio)* |
