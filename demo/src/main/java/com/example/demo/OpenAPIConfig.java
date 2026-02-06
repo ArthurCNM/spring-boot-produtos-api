@@ -1,8 +1,11 @@
 package com.example.demo;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.Contact;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+
 
 @Configuration
 public class OpenAPIConfig {
@@ -13,6 +16,9 @@ public class OpenAPIConfig {
                 .info(new Info()
                         .title("API de Produtos - Bootcamp Deloitte")
                         .version("1.0")
-                        .description("Esta API faz parte do sistema de gerenciamento de produtos")
-                );
-    }}
+                        .description("Esta API faz parte de um sistema de gerenciamento de produtos")
+                        .contact(new Contact()
+                                .name("Arthur Morais")
+                                .email("arthur.cnm@gmail.com")));
+    }
+}
