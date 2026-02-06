@@ -74,3 +74,5 @@ A documentação interativa está disponível no ambiente de produção: [https:
    mvn clean install
 3. Execute a aplicação
    A API estará disponível em http://localhost:8080/produtos.
+   o H2 estará disponível em http://localhost:8080/h2-console
+   o Swagger estará disponível em http://localhost:8080/swagger-ui/index.html#/
