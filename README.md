@@ -55,6 +55,49 @@ src/main/java/com/example/demo/
 * **PATCH /produtos/{id} Atualiza campos parciais do produto**
 * **DELETE /produtos/{id} Remove um produto por ID**
 
+## 📖 Exemplos de Uso
+1. Criar Produto (POST /produtos)
+
+```json
+{
+  "nome": "Notebook Gamer",
+  "preco": 4500.00
+}
+```
+2. Atualização Completa (PUT /produtos/{id})
+ ```json
+{
+  "nome": "Mouse Gamer Wireless",
+  "preco": 280.00
+}     
+```
+3. Atualização Parcial (PATCH /produtos/{id})
+ ```json
+{
+  "preco": 255.00
+}
+```
+
+4. Resposta padrão para sucesso
+```json
+{
+  "id": 1,
+  "nome": "Mouse Gamer Wireless",
+  "preco": 255.00
+}
+```
+5. Resposta de erro
+   _Exemplo de quando um ID não existe no banco de dados._
+```json
+{
+  "timestamp": "2026-05-20T10:00:00",
+  "status": 404,
+  "error": "Not Found",
+  "message": "Produto com ID 199 não encontrado",
+  "path": "/produtos/199"
+}
+```   
+
 ## ☁️ Deploy e CI/CD
 A aplicação conta com uma esteira automatizada de **Integração e Entrega Contínua (CI/CD)**:
 * **CI:** Build e testes automatizados via GitHub Actions a cada push na branch `main`.
@@ -72,7 +115,7 @@ A documentação interativa está disponível no ambiente de produção: [https:
 2. Instale as dependências e compile o projeto:
    ```bash
    mvn clean install
-3. Execute a aplicação
-   A API estará disponível em http://localhost:8080/produtos.
-   o H2 estará disponível em http://localhost:8080/h2-console
-   o Swagger estará disponível em http://localhost:8080/swagger-ui/index.html#/
+3. Execute a aplicação <br>
+   A API estará disponível em http://localhost:8080/produtos. <br>
+   o H2 estará disponível em http://localhost:8080/h2-console. <br>
+   o Swagger estará disponível em http://localhost:8080/swagger-ui/index.html#/. <br>
