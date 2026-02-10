@@ -7,7 +7,7 @@ Esta é uma API REST desenvolvida durante o **Bootcamp Java Deloitte**. O projet
 * **Java 21**
 * **Spring Boot 3.2.2**
 * **Spring Data JPA** (Persistência de dados)
-* **H2 Database** (Banco de dados em memória)
+* **H2 Database** (Banco de dados em arquivo)
 * **Maven** (Gerenciador de dependências)
 * **SpringDoc OpenAPI (Swagger)** (Documentação da API)
 * **GitHub Actions** (Pipeline de CI/CD)
