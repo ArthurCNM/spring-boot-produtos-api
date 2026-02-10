@@ -120,7 +120,7 @@ A documentação interativa está disponível no ambiente de produção: [https:
    o H2 estará disponível em http://localhost:8080/h2-console. <br>
    o Swagger estará disponível em http://localhost:8080/swagger-ui/index.html#/. <br>
 
-##🗄️ Tabela de Credenciais H2 Local
+## 🗄️ Tabela de Credenciais H2 Local
 | Propriedade | Valor |
 | :--- | :--- |
 | **Interface Web** | `http://localhost:8080/h2-console` |
