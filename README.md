@@ -125,6 +125,6 @@ A documentação interativa está disponível no ambiente de produção: [https:
 | :--- | :--- |
 | **Interface Web** | `http://localhost:8080/h2-console` |
 | **Driver class** | `org.h2.Driver` |
-| **JDBC URL** | `jdbc:h2:mem:testdb` |
+| **JDBC URL** | `jdbc:h2:file:./db/testdb` |
 | **User Name** | `sa` |
 | **Password** | *(vazio)* |
